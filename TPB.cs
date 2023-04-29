@@ -6,9 +6,11 @@ HttpClient client = new HttpClient();
 // Search query
 Console.WriteLine("Enter search term:");
 string query = Console.ReadLine();
-
+// Search query
+Console.WriteLine("Enter category or leave blank for all:");
+string category = Console.ReadLine()
 // Pirate Bay API endpoint
-string url = $"https://apibay.org/q.php?q={Uri.EscapeDataString(query)}&cat=";
+string url = $"https://apibay.org/q.php?q={Uri.EscapeDataString(query)}&cat=Uri.EscapeDataString(category)}";
 
 // Send HTTP request
 HttpResponseMessage response = await client.GetAsync(url);
